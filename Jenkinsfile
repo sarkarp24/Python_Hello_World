@@ -5,7 +5,7 @@ pipeline {
         IMAGE_REG = "docker.io"
         IMAGE_REPO = "prodyotsarkar/python-demoapp"
         IMAGE_TAG = "latest"
-        AWS_APP_NAME = "Python_Hello_World"
+        AWS_APP_NAME = "python_hello_world"
         AWS_REGISTRY = '762233725823.dkr.ecr.us-west-2.amazonaws.com'
     }
 
@@ -68,7 +68,7 @@ pipeline {
                     aws ecs create-service \
                     --cluster DemoClusterJenkins \
                     --service-name DemoClusterJenkins-sevice \
-                    --task-definition Python-Hello-World-TaskDefinition-Prod:$LATEST_TD_REVISION \
+                    --task-definition python-hello-world-TaskDefinition-Prod:$LATEST_TD_REVISION \
                     --desired-count 1 \
                     --launch-type FARGATE \
                     --platform-version LATEST \
