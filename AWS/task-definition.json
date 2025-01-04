@@ -1,0 +1,25 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "family": "Python-Hello-World-TaskDefinition-Prod",
+    "containerDefinitions": [
+        {
+            "name": "Python-Hello-World",
+            "image": "762233725823.dkr.ecr.us-west-2.amazonaws.com/Python-Hello-World:#APP_VERSION#",
+            "portMappings": [{
+                "name": "nginx-80-tcp",
+                "containerPort": 80,
+                "hostPort": 80,
+                "protocol": "tcp",
+                "appProtocol": "http"
+            }],
+            "essential": true
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::762233725823:role/ecsTaskExecutionRole"
+}
