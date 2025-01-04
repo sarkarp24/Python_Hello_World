@@ -47,6 +47,7 @@ pipeline {
                 }
             }
         }
+        /*
         stage('AWS Deployment') {
             agent{
                 docker{
@@ -79,5 +80,6 @@ pipeline {
                 }
             }
         }
+        */
     }
 }
