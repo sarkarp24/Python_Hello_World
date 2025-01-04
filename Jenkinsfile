@@ -18,6 +18,8 @@ pipeline {
         stage('docker build') {
             steps {
                 sh '''
+                    pwd
+                    ls -la
                     docker build -t test_build .
                 '''
             }
