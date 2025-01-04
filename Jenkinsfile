@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git changelog: false, poll: false, url: 'https://github.com/sarkarp24/python-demoapp.git'
+                git changelog: false, poll: false, url: 'https://github.com/sarkarp24/Python_Hello_World.git'
                 sh 'docker --version'
             }
         }
