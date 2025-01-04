@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "python-hello-world",
-            "image": "762233725823.dkr.ecr.us-west-2.amazonaws.com/python-hello-world:#APP_VERSION#",
+            "image": "762233725823.dkr.ecr.us-west-2.amazonaws.com/python-hello_world:#APP_VERSION#",
             "portMappings": [{
                 "name": "nginx-80-tcp",
                 "containerPort": 80,
