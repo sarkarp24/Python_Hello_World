@@ -12,4 +12,7 @@ COPY Hello_World.py .
 
 EXPOSE 5000
 
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "Hello_World:app"]
+ENTRYPOINT ["python"]
+#CMD ["gunicorn", "-b", "0.0.0.0:5000", "Hello_World:app"]
+
+CMD ["Hello_World.py"]
